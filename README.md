@@ -1,10 +1,10 @@
-# TEMPER — Weather Orb
+﻿# TEMPER — Weather Orb
 
 > Glassmorphism weather instrument · Live di **https://weather-orb.vercel.app** · Data [Open-Meteo](https://open-meteo.com) · Style [designmd.app/library/weather-orb](https://designmd.app/library/weather-orb)
 
-![TEMPER preview](public/preview.png)
+![HAWA preview](public/preview.png)
 
-Aplikasi cuaca single-page yang terinspirasi library **TEMPER** (glass · blur · glow · drift). Cari kota, lihat kondisi sekarang dengan orb bercahaya yang adaptif, hourly 12 jam, AQI, forecast 7 hari, sunrise/sunset, share link langsung. Mobile-first, no API key, cache 5 menit.
+Aplikasi cuaca single-page yang terinspirasi konsep **HAWA** (glass · blur · glow · drift). Cari kota, lihat kondisi sekarang dengan orb bercahaya yang adaptif, hourly 12 jam, AQI, forecast 7 hari, sunrise/sunset, share link langsung. Mobile-first, no API key, cache 5 menit.
 
 ---
 

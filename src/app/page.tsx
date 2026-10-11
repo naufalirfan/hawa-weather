@@ -191,8 +191,8 @@ export default function Home() {
               {effectivePhase === "malam" ? "🌙" : effectivePhase === "pagi" ? "🌅" : effectivePhase === "sore" ? "🌇" : "☀️"}
             </div>
             <div className="min-w-0">
-              <div className="font-bold tracking-tight text-[15px] md:text-base leading-none">TEMPER</div>
-              <div className="label -mt-0.5 truncate">weather instrument · Open-Meteo</div>
+              <div className="font-bold tracking-tight text-[15px] md:text-base leading-none">HAWA</div>
+              <div className="label -mt-0.5 truncate">instrumen cuaca · Open-Meteo</div>
             </div>
           </div>
 
@@ -370,7 +370,7 @@ export default function Home() {
 
         <footer className="mt-4 md:mt-6 text-center px-2">
           <div className="label break-words flex flex-wrap items-center justify-center gap-2">
-            <span>Built with Next.js · Data Open-Meteo · Style TEMPER glass/blur/glow</span>
+            <span>Built with Next.js · Data Open-Meteo · Style HAWA glass/blur/glow</span>
             <span>·</span>
             <span className="text-[var(--glow)] font-semibold">
               {visitors !== null ? `TOTAL VISITORS: ${visitors.toLocaleString("id-ID")}` : "TOTAL VISITORS: …"}
