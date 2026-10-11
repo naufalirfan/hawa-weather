@@ -1,0 +1,21 @@
+@import "tailwindcss";
+:root{--ink:#DCE3F2;--dim:#7C87A6;--glow:#9FD8FF;--panel:rgba(22,26,40,.72);--hair:rgba(180,195,235,.16);--bg:#070A14;--bg2:#1A2238;--bg3:#141B2E}
+*{scrollbar-width:thin;min-width:0}
+html,body{overflow-x:hidden;max-width:100%}
+html{font-size:15px}
+@media(max-width:768px){html{font-size:14px}}
+@media(max-width:380px){html{font-size:13px}}
+body{background:radial-gradient(1200px 800px at 70% -10%, #1A2A4A 0%, transparent 60%),linear-gradient(180deg,var(--bg2) 0%,var(--bg) 55%, #05070F 100%);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh}
+.glass{background:var(--panel);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--hair);border-radius:14px}
+@media(min-width:768px){.glass{border-radius:16px}}
+.hair{border-color:var(--hair)}
+.glow{box-shadow:0 0 32px rgba(159,216,255,.18), inset 0 1px 0 rgba(255,255,255,.06)}
+.orb{width:96px;height:96px;border-radius:50%;filter:blur(.2px);animation:drift 14s ease-in-out infinite, pulse 3s ease-in-out infinite}
+@media(min-width:380px){.orb{width:112px;height:112px}}
+@media(min-width:768px){.orb{width:200px;height:200px}}
+@keyframes drift{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-8px) scale(1.02)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 22px var(--glow-a, rgba(159,216,255,.35))}50%{box-shadow:0 0 36px var(--glow-a, rgba(159,216,255,.55))}}
+.label{font-family:"Courier New",monospace;font-size:.62rem;letter-spacing:.1em;font-weight:600;color:var(--dim);text-transform:uppercase;line-height:1.2}
+@media(min-width:768px){.label{font-size:.7rem;letter-spacing:.12em}}
+.scrollbar-none{scrollbar-width:none;-ms-overflow-style:none}
+.scrollbar-none::-webkit-scrollbar{display:none}
