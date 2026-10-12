@@ -1,6 +1,6 @@
 ﻿---
 version: alpha
-name: "TEMPER — a weather instrument"
+name: "Hawa Weather — instrumen cuaca"
 description: "Weather/Nature glassmorphism with orb, blur, glow — dark translucent."
 colors:
   primary: "#DCE3F2"
@@ -68,7 +68,7 @@ components:
 
 ## Overview
 
-TEMPER — a weather instrument. Dark translucent atmosphere: orb glow, glass panels, backdrop blur. Density 5/10, motion 8/10. Experimental, calm, instrument-like.
+Hawa Weather — instrumen cuaca. Dark translucent atmosphere: orb glow, glass panels, backdrop blur. Density 5/10, motion 8/10. Experimental, calm, instrument-like.
 
 ## Colors
 

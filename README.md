@@ -1,10 +1,10 @@
-﻿# TEMPER — Weather Orb
+﻿# Hawa Weather
 
-> Glassmorphism weather instrument · Live di **https://weather-orb.vercel.app** · Data [Open-Meteo](https://open-meteo.com) · Style [designmd.app/library/weather-orb](https://designmd.app/library/weather-orb)
+> Glassmorphism weather instrument · Live di **https://hawa-weather.vercel.app** · Data [Open-Meteo](https://open-meteo.com) · Style [designmd.app/library/hawa-weather](https://designmd.app/library/hawa-weather)
 
 ![HAWA preview](public/preview.png)
 
-Aplikasi cuaca single-page yang terinspirasi konsep **HAWA** (glass · blur · glow · drift). Cari kota, lihat kondisi sekarang dengan orb bercahaya yang adaptif, hourly 12 jam, AQI, forecast 7 hari, sunrise/sunset, share link langsung. Mobile-first, no API key, cache 5 menit.
+Aplikasi cuaca single-page yang terinspirasi konsep **Hawa Weather** (glass · blur · glow · drift). Cari kota, lihat kondisi sekarang dengan orb bercahaya yang adaptif, hourly 12 jam, AQI, forecast 7 hari, sunrise/sunset, share link langsung. Mobile-first, no API key, cache 5 menit.
 
 ---
 
@@ -70,7 +70,7 @@ Env: tidak perlu — Open-Meteo tanpa key. Jika butuh override base URL, set di 
 ### Vercel (aktif)
 
 ```bash
-vercel --prod      # sudah live di https://weather-orb.vercel.app
+vercel --prod      # sudah live di https://hawa-weather.vercel.app
 ```
 
 `next.config.ts` tanpa adapter. SSO Protection dimatikan (`ssoProtection: null`) agar `*.vercel.app` public.
@@ -105,7 +105,7 @@ DESIGN.md               # spec TEMPER
 ## 🙏 Kredit
 
 - Data cuaca: [Open-Meteo](https://open-meteo.com) (CC BY 4.0)
-- Inspirasi visual: [designmd.app/library/weather-orb — TEMPER](https://designmd.app/library/weather-orb)
+- Inspirasi visual: [designmd.app/library/hawa-weather — TEMPER](https://designmd.app/library/hawa-weather)
 - Built with [Next.js](https://nextjs.org) · Deployed on [Vercel](https://vercel.com)
 
 ---

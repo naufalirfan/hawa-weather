@@ -2,8 +2,8 @@
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "HAWA — instrumen cuaca",
-  description: "HAWA: Instrumen cuaca glassmorphism & visual atmosferik — didukung Open-Meteo",
+  title: "Hawa Weather — instrumen cuaca",
+  description: "Hawa Weather: Instrumen cuaca glassmorphism & visual atmosferik — didukung Open-Meteo",
 };
 
 export const viewport: Viewport = {
