@@ -6,7 +6,7 @@ import {
   deleteSavedLocation,
   setPrimaryLocation,
   updateLocationLabel,
-} from "@/lib/turso";
+} from "@/lib/supabase";
 
 export async function GET(req: NextRequest) {
   try {

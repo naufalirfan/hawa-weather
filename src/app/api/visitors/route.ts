@@ -1,5 +1,5 @@
 ﻿import { NextResponse } from "next/server";
-import { getVisitors, incrementVisitors } from "@/lib/turso";
+import { getVisitors, incrementVisitors } from "@/lib/supabase";
 
 export async function GET() {
   try {

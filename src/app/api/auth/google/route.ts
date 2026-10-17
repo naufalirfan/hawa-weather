@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyGoogleIdToken, createSessionToken } from "@/lib/auth";
-import { upsertUser } from "@/lib/turso";
+import { upsertUser } from "@/lib/supabase";
 
 export async function POST(req: NextRequest) {
   try {

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSessionUser } from "@/lib/auth";
-import { getSavedLocations } from "@/lib/turso";
+import { getSavedLocations } from "@/lib/supabase";
 
 export async function GET(req: NextRequest) {
   try {
