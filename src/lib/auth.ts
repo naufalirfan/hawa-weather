@@ -1,6 +1,10 @@
 // Web-Crypto compatible Auth & JWT Helpers for Hawa Weather
 
-const JWT_SECRET = process.env.JWT_SECRET || "hawa-weather-super-secret-jwt-key-2026-authed";
+function jwtSecret(): string {
+  const s = process.env.JWT_SECRET;
+  if (!s) throw new Error("JWT_SECRET env missing");
+  return s;
+}
 
 export interface SessionPayload {
   id: string; // Google sub
@@ -33,7 +37,7 @@ function base64UrlDecode(str: string): string {
 async function getCryptoKey(): Promise<CryptoKey> {
   return await crypto.subtle.importKey(
     "raw",
-    strToBuf(JWT_SECRET) as any,
+    strToBuf(jwtSecret()) as any,
     { name: "HMAC", hash: "SHA-256" },
     false,
     ["sign", "verify"]

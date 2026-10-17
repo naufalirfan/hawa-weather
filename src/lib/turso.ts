@@ -1,7 +1,7 @@
 // Turso LibSQL HTTP API Client for Hawa Weather
 
-const DEFAULT_TURSO_URL = "https://payment-bridge-db-naufalirfan.aws-ap-northeast-1.turso.io";
-const DEFAULT_TURSO_TOKEN = "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3OTEyMzY4MDIsImlkIjoiMDFhMTBlMDgtNmYwMS03MmU5LWExNDQtYzE2ZjM2YzQ0ZDIxIiwia2lkIjoiblRsYmdNTlhxcmRubDVHdUNkR3kzREhMckRjZ2J2b1FQVVJJUjRWWDZ2MCIsInJpZCI6IjkwMjU2MTU1LWNmMjctNGU0NC04MGEyLWUwYjA3YjJlMGJiOCJ9.OF1id5IV7pJN95uO54GRSq1HsSf4znF8b5-_usWLZSl8e0zSIm57TMATVSvY2vFbEwxkzoMsbPEjsAQZOCGLAw";
+const DEFAULT_TURSO_URL = "";
+const DEFAULT_TURSO_TOKEN = "";
 
 export interface UserProfile {
   id: string;
@@ -25,6 +25,7 @@ export interface SavedLocation {
 function getEndpoint(): { url: string; token: string } {
   const rawUrl = process.env.TURSO_DATABASE_URL || DEFAULT_TURSO_URL;
   const token = process.env.TURSO_AUTH_TOKEN || DEFAULT_TURSO_TOKEN;
+  if (!rawUrl || !token) throw new Error("TURSO_DATABASE_URL / TURSO_AUTH_TOKEN env missing");
   const baseUrl = rawUrl.replace(/^libsql:\/\//i, "https://").replace(/\/+$/, "");
   return {
     url: `${baseUrl}/v2/pipeline`,
