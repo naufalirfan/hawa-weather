@@ -28,8 +28,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Credential or is_demo required" }, { status: 400 });
     }
 
-    // Upsert into Turso database
-    await upsertUser(userPayload);
+    // Upsert into database safely so login never breaks if db has connectivity issues
+    try {
+      await upsertUser(userPayload);
+    } catch (dbErr) {
+      console.warn("User upsert warning:", dbErr);
+    }
 
     // Create session token
     const token = await createSessionToken(userPayload);

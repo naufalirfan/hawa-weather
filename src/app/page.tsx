@@ -385,7 +385,7 @@ export default function Home() {
         background: skyBackgrounds[effectivePhase],
       }}
     >
-      <main className="mx-auto max-w-6xl px-3 py-3 md:px-6 md:py-8 min-w-0">
+      <main className="mx-auto max-w-6xl px-3 pb-6 safe-top-padding md:px-6 md:pb-8 min-w-0">
         <header className="flex flex-wrap items-center justify-between gap-2 md:gap-3 min-w-0">
           <div className="flex items-center gap-2 min-w-0">
             <div className="h-8 w-8 md:h-9 md:w-9 shrink-0 rounded-xl bg-[var(--glow)] grid place-items-center text-[var(--bg)] font-bold text-sm md:text-base shadow-sm">

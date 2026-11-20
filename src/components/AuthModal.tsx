@@ -51,6 +51,9 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
             width: 280,
           });
         }
+
+        // Trigger seamless Google One Tap
+        window.google.accounts.id.prompt();
       } catch (e) {
         console.warn("GSI init warning:", e);
       }
@@ -74,36 +77,6 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
       onClose();
     } catch (err: any) {
       setError(err?.message || "Terjadi kesalahan saat verifikasi login");
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  async function handleInstantLogin() {
-    setLoading(true);
-    setError(null);
-    try {
-      const res = await fetch("/api/auth/google", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          is_demo: true,
-          demoUser: {
-            id: "google_user_naufal",
-            email: "naufalfaster@gmail.com",
-            name: "Naufal Irfansyah",
-            picture: "https://lh3.googleusercontent.com/a/ACg8ocIS0GZ4y-H9m7Nl4",
-          },
-        }),
-      });
-      const data = await res.json();
-      if (!res.ok || !data.user) {
-        throw new Error(data.error || "Gagal masuk");
-      }
-      onLoginSuccess(data.user);
-      onClose();
-    } catch (err: any) {
-      setError(err?.message || "Terjadi kesalahan login");
     } finally {
       setLoading(false);
     }
@@ -146,23 +119,6 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
         <div className="mt-6 flex flex-col items-center gap-3 w-full">
           {/* Official Google Sign-In Button Container */}
           <div id="google-signin-btn-container" className="flex justify-center min-h-[44px] my-1"></div>
-
-          {/* Quick Instant Option */}
-          <div className="w-full flex items-center gap-2 my-1">
-            <div className="flex-1 h-px bg-[var(--hair)]"></div>
-            <span className="text-[10px] uppercase font-mono text-[var(--dim)] tracking-wider">
-              atau masuk instan
-            </span>
-            <div className="flex-1 h-px bg-[var(--hair)]"></div>
-          </div>
-
-          <button
-            onClick={handleInstantLogin}
-            disabled={loading}
-            className="w-full py-2.5 px-4 rounded-full bg-white/5 hover:bg-white/10 border border-[var(--hair)] text-xs font-semibold flex items-center justify-center gap-2 transition-all active:scale-95 text-[var(--dim)] hover:text-[var(--ink)]"
-          >
-            <span>⚡ Masuk Cepat (Akun Naufal · Turso Cloud)</span>
-          </button>
         </div>
 
         <div className="mt-5 text-[11px] text-center text-[var(--dim)] space-y-1">

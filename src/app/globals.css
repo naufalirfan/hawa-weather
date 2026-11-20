@@ -19,3 +19,5 @@ body{background:radial-gradient(1200px 800px at 70% -10%, #1A2A4A 0%, transparen
 @media(min-width:768px){.label{font-size:.7rem;letter-spacing:.12em}}
 .scrollbar-none{scrollbar-width:none;-ms-overflow-style:none}
 .scrollbar-none::-webkit-scrollbar{display:none}
+.safe-top-padding{padding-top:max(calc(env(safe-area-inset-top, 0px) + 14px), 44px)}
+@media(min-width:768px){.safe-top-padding{padding-top:2rem}}
