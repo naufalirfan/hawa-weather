@@ -385,8 +385,8 @@ export default function Home() {
         background: skyBackgrounds[effectivePhase],
       }}
     >
-      <main className="mx-auto max-w-6xl px-3 pb-6 safe-top-padding md:px-6 md:pb-8 min-w-0">
-        <header className="flex flex-wrap items-center justify-between gap-2 md:gap-3 min-w-0">
+      <main className="mx-auto max-w-6xl px-3 pb-6 md:px-6 md:pb-8 min-w-0">
+        <header className="sticky top-0 z-40 safe-top-padding pb-3 backdrop-blur-xl bg-[var(--bg)]/80 border-b border-white/5 -mx-3 px-3 md:-mx-6 md:px-6 flex flex-wrap items-center justify-between gap-2 md:gap-3 min-w-0 transition-colors shadow-sm">
           <div className="flex items-center gap-2 min-w-0">
             <div className="h-8 w-8 md:h-9 md:w-9 shrink-0 rounded-xl bg-[var(--glow)] grid place-items-center text-[var(--bg)] font-bold text-sm md:text-base shadow-sm">
               {effectivePhase === "malam"
